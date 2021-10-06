@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class C04__verifyUrl {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ibila\\Documents\\selenium dependencies\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "(your computer's info)\\selenium dependencies\\drivers\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
 
@@ -16,9 +16,9 @@ public class C04__verifyUrl {
         String actualUrl = driver.getCurrentUrl();
 
         if (actualUrl.equals(expectedUrl)){
-            System.out.println("girilen url ortusuyor, test PASS");
+            System.out.println("this is the same url, test PASS");
         }else{
-            System.out.println("girdiginiz urlde bir sorun var. url : " + driver.getCurrentUrl());
+            System.out.println("this url could not match the url of the website. website's url : " + driver.getCurrentUrl());
         }
 
         driver.close();
